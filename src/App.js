@@ -6,6 +6,9 @@ import Foo from "./Foo/Foo.jsx";
 import Bar from "./Bar/Bar.jsx";
 import Baz from "./Baz/Baz.jsx";
 import Error from "./Error/Error.jsx";
+import Homepage from "./Home/Homepage/Homepage";
+import AboutPage from "./About/About";
+import DetailPost from "./Detail/DetailPost";
 
 // here is some external content. look at the /baz route below
 // to see how this content is passed down to the components via props
@@ -17,32 +20,49 @@ const externalContent = {
 };
 
 function App() {
+
   return (
     <>
       <header>
-        <nav>
-          <ul>
-            {/* these links should show you how to connect up a link to a specific route */}
-            <li>
-              <Link to="/">Home</Link>
-            </li>
-            <li>
-              <Link to="/foo">Foo</Link>
-            </li>
-            <li>
-              <Link to="/bar/hats/sombrero">Bar</Link>
-            </li>
-            <li>
-              <Link to="/baz">Baz</Link>
-            </li>
-          </ul>
-        </nav>
+        {Homepage}
+
+        {/*<nav>*/}
+        {/*  <ul>*/}
+        {/*    /!* these links should show you how to connect up a link to a specific route *!/*/}
+        {/*    <li>*/}
+        {/*      <Link to="/">Home</Link>*/}
+        {/*    </li>*/}
+        {/*    <li>*/}
+        {/*      <Link to="/foo">Foo</Link>*/}
+        {/*    </li>*/}
+        {/*    <li>*/}
+        {/*      <Link to="/bar/hats/sombrero">Bar</Link>*/}
+        {/*    </li>*/}
+        {/*    <li>*/}
+        {/*      <Link to="/baz">Baz</Link>*/}
+        {/*    </li>*/}
+        {/*  </ul>*/}
+        {/*</nav>*/}
       </header>
       {/* A <Switch> looks through its children <Route>s and
             renders the first one that matches the current URL. */}
       <Switch>
-        <Route path="/" exact component={Home} />
+        <Route path="/" exact component={Homepage} />
         <Route path="/foo" exact component={Foo} />
+        <Route path="/about" exact component={AboutPage} />
+
+        {/*<Route*/}
+        {/*    path="/posts/:id"*/}
+        {/*    exact*/}
+
+        {/*    render={({ match }) => (*/}
+        {/*        <DetailPost*/}
+        {/*            id={match.param.id}*/}
+        {/*            post={mockPosts}*/}
+        {/*        />*/}
+        {/*    )}*/}
+        {/*/>*/}
+
         {/* passing parameters via a route path */}
         <Route
           path="/bar/:categoryId/:productId"
@@ -56,6 +76,7 @@ function App() {
             />
           )}
         />
+
         <Route
           path="/baz"
           exact
