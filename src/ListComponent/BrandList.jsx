@@ -12,7 +12,8 @@ const BrandList = (props) => {
 
             <ul className={styles.listContainer}>
                 {props.brands.map(brand => (
-                        <h4>{brand}</h4>
+                    // <h4><a href={'/seainfo6150-final-project-webapp/category/'+props.post.brand}>{brand}</a></h4>
+                    <h4><a href={'/seainfo6150-final-project-webapp/category/'+brand}>{brand}</a></h4>
                 ))}
             </ul>
 

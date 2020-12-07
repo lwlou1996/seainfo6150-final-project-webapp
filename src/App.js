@@ -8,6 +8,9 @@ import Baz from "./Baz/Baz.jsx";
 import Error from "./Error/Error.jsx";
 import Homepage from "./Home/Homepage/Homepage";
 import AboutPage from "./About/About";
+import CategoryList from "./ListComponent/CategoryList";
+import PostDetailItem from "./ListItem/PostDetailItem";
+import SingleCategoryList from "./ListComponent/SingleCategoryList";
 
 const externalContent = {
     id: "article-1",
@@ -66,11 +69,11 @@ function App() {
                 {/* A <Switch> looks through its children <Route>s and
             renders the first one that matches the current URL. */}
                 <Switch>
-                    <Route path="/" exact>
+                    <Route path="/seainfo6150-final-project-webapp" exact>
                         <Homepage posts={fetchedData} />
                     </Route>
-                    <Route path="/foo" exact component={Foo} />
-                    <Route path="/about" exact component={AboutPage} />
+                    <Route path="/seainfo6150-final-project-webapp/foo" exact component={Foo} />
+                    <Route path="/seainfo6150-final-project-webapp/about" exact component={AboutPage} />
 
                     {/*<Route*/}
                     {/*    path="/posts/:id"*/}
@@ -85,18 +88,53 @@ function App() {
                     {/*/>*/}
 
                     {/* passing parameters via a route path */}
+                    {/*<Route*/}
+                    {/*    path="/bar/:categoryId/:productId"*/}
+                    {/*    exact*/}
+                    {/*    render={({ match }) => (*/}
+                    {/*        // getting the parameters from the url and passing*/}
+                    {/*        // down to the component as props*/}
+                    {/*        <Bar*/}
+                    {/*            categoryId={match.params.categoryId}*/}
+                    {/*            productId={match.params.productId}*/}
+                    {/*        />*/}
+                    {/*    )}*/}
+                    {/*/>*/}
+
                     <Route
-                        path="/bar/:categoryId/:productId"
+                        path="/seainfo6150-final-project-webapp/posts/:id"
                         exact
                         render={({ match }) => (
                             // getting the parameters from the url and passing
                             // down to the component as props
-                            <Bar
-                                categoryId={match.params.categoryId}
-                                productId={match.params.productId}
+                            <PostDetailItem
+                                postId={match.params.id}
+                                posts={fetchedData}
                             />
                         )}
                     />
+
+                    <Route
+                        path="/seainfo6150-final-project-webapp/category/:brand"
+                        exact
+                        render={({ match }) => (
+                            // getting the parameters from the url and passing
+                            // down to the component as props
+                            <SingleCategoryList
+                                brand={match.params.brand}
+                                posts={fetchedData}
+                            />
+                        )}
+                    />
+
+                    <Route
+                        path="/seainfo6150-final-project-webapp/category"
+                        exact>
+
+                        <CategoryList posts={fetchedData} />
+                    </Route>
+
+
 
                     <Route
                         path="/baz"

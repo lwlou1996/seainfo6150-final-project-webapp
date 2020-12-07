@@ -8,7 +8,7 @@ const NaviBar = () => {
         <div className={styles.navContainer}>
             <header className={styles.container}>
                 <nav>
-                    <a href="/" className={styles.mainIcon}>STORE</a>
+                    <a href="/seainfo6150-final-project-webapp" className={styles.mainIcon}>STORE</a>
                 </nav>
 
                 <nav>
@@ -16,15 +16,15 @@ const NaviBar = () => {
                         {/* these links should show you how to connect up a link to a specific route */}
 
                         <li className={styles.listItem}>
-                            <a href="/about">About</a>
+                            <a href="/seainfo6150-final-project-webapp/about">About</a>
                         </li>
 
                         <li className={styles.listItem}>
-                            <a href="/category">Category</a>
+                            <a href="/seainfo6150-final-project-webapp/category">Category</a>
                         </li>
 
                         <li className={styles.listItem}>
-                            <a href="/order">Order</a>
+                            <a href="/seainfo6150-final-project-webapp/order">Order</a>
                         </li>
 
                     </ul>
