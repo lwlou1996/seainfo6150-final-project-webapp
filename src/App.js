@@ -25,7 +25,8 @@ function App() {
     useEffect(() => {
         const fetchData = async () => {
             // performs a GET request
-            const response = await fetch("https://5fc3f9f8e5c28f0016f54fc2.mockapi.io/api/v1/posts");
+            // const response = await fetch("https://5fc3f9f8e5c28f0016f54fc2.mockapi.io/api/v1/posts");
+            const response = await fetch("https://run.mocky.io/v3/2105e77e-1571-47bf-b997-bf7889748d14");
             const responseJson = await response.json();
 
             console.log('post resp - json:', responseJson)
@@ -69,11 +70,14 @@ function App() {
                 {/* A <Switch> looks through its children <Route>s and
             renders the first one that matches the current URL. */}
                 <Switch>
-                    <Route path="/seainfo6150-final-project-webapp" exact>
+                    <Route path="/" exact>
+                    {/*<Route path="/seainfo6150-final-project-webapp" exact>*/}
                         <Homepage posts={fetchedData} />
                     </Route>
                     <Route path="/seainfo6150-final-project-webapp/foo" exact component={Foo} />
-                    <Route path="/seainfo6150-final-project-webapp/about" exact component={AboutPage} />
+
+                    <Route path="/about" exact component={AboutPage} />
+                    {/*<Route path="/seainfo6150-final-project-webapp/about" exact component={AboutPage} />*/}
 
                     {/*<Route*/}
                     {/*    path="/posts/:id"*/}
@@ -102,7 +106,8 @@ function App() {
                     {/*/>*/}
 
                     <Route
-                        path="/seainfo6150-final-project-webapp/posts/:id"
+                        path="/posts/:id"
+                        // path="/seainfo6150-final-project-webapp/posts/:id"
                         exact
                         render={({ match }) => (
                             // getting the parameters from the url and passing
@@ -115,7 +120,8 @@ function App() {
                     />
 
                     <Route
-                        path="/seainfo6150-final-project-webapp/category/:brand"
+                        path="/category/:brand"
+                        // path="/seainfo6150-final-project-webapp/category/:brand"
                         exact
                         render={({ match }) => (
                             // getting the parameters from the url and passing
@@ -128,7 +134,8 @@ function App() {
                     />
 
                     <Route
-                        path="/seainfo6150-final-project-webapp/category"
+                        path="/category"
+                        // path="/seainfo6150-final-project-webapp/category"
                         exact>
 
                         <CategoryList posts={fetchedData} />

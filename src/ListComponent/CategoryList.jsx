@@ -2,6 +2,8 @@ import React from 'react'
 import NaviBar from "../Bar/NaviBar/NaviBar";
 import CategoryItem from "../ListItem/CategoryItem";
 
+import styles from './CategoryList.module.css'
+
 const CategoryList = (props) => {
 
     const brandListContent = new Set();
@@ -27,7 +29,7 @@ const CategoryList = (props) => {
                 <NaviBar />
             </div>
 
-            <div>
+            <div className={styles.listContainer}>
                 <ul>
                     {brandList.map(brand => (
                         <CategoryItem brand={brand} posts={props.posts} />
