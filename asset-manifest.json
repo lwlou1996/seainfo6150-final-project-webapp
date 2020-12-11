@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/seainfo6150-final-project-webapp/static/css/main.e4fcfe54.chunk.css",
-    "main.js": "/seainfo6150-final-project-webapp/static/js/main.4d502f32.chunk.js",
-    "main.js.map": "/seainfo6150-final-project-webapp/static/js/main.4d502f32.chunk.js.map",
+    "main.css": "/seainfo6150-final-project-webapp/static/css/main.a6ccf3ab.chunk.css",
+    "main.js": "/seainfo6150-final-project-webapp/static/js/main.abdfff1c.chunk.js",
+    "main.js.map": "/seainfo6150-final-project-webapp/static/js/main.abdfff1c.chunk.js.map",
     "runtime~main.js": "/seainfo6150-final-project-webapp/static/js/runtime~main.c4d7f5e8.js",
     "runtime~main.js.map": "/seainfo6150-final-project-webapp/static/js/runtime~main.c4d7f5e8.js.map",
-    "static/js/2.d0494dc1.chunk.js": "/seainfo6150-final-project-webapp/static/js/2.d0494dc1.chunk.js",
-    "static/js/2.d0494dc1.chunk.js.map": "/seainfo6150-final-project-webapp/static/js/2.d0494dc1.chunk.js.map",
+    "static/js/2.5afaef01.chunk.js": "/seainfo6150-final-project-webapp/static/js/2.5afaef01.chunk.js",
+    "static/js/2.5afaef01.chunk.js.map": "/seainfo6150-final-project-webapp/static/js/2.5afaef01.chunk.js.map",
     "index.html": "/seainfo6150-final-project-webapp/index.html",
-    "precache-manifest.63e74df32c4fec5d66928a02cb88dac4.js": "/seainfo6150-final-project-webapp/precache-manifest.63e74df32c4fec5d66928a02cb88dac4.js",
+    "precache-manifest.e002e78efbd86072d64ba211e5b183a8.js": "/seainfo6150-final-project-webapp/precache-manifest.e002e78efbd86072d64ba211e5b183a8.js",
     "service-worker.js": "/seainfo6150-final-project-webapp/service-worker.js",
-    "static/css/main.e4fcfe54.chunk.css.map": "/seainfo6150-final-project-webapp/static/css/main.e4fcfe54.chunk.css.map",
+    "static/css/main.a6ccf3ab.chunk.css.map": "/seainfo6150-final-project-webapp/static/css/main.a6ccf3ab.chunk.css.map",
     "static/media/error.png": "/seainfo6150-final-project-webapp/static/media/error.d0a7dd00.png",
     "static/media/mainpage.png": "/seainfo6150-final-project-webapp/static/media/mainpage.93fe9297.png"
   }
