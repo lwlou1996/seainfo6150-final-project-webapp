@@ -25,13 +25,6 @@ const Homepage = (props) => {
                     <PostItem post={post} key={post.id} />
                 ))}
 
-                {/* display the post with the intended attr */}
-                {/*{mockPosts*/}
-                {/*    .filter((post) => post.author === "author 1")*/}
-                {/*    .map((post) => (*/}
-                {/*        <PostItem post={post} key={post.id} />*/}
-                {/*    ))}*/}
-
             </ul>
         );
     } else {

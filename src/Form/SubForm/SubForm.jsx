@@ -18,7 +18,6 @@ const SubForm = () => {
                                 type="text"
                                 id="first-name"
                                 name="first-name"
-                                // onChange={(e)=>{setFirstName(e.target.value)}}
                                 required
                             />
                         </label>
@@ -31,7 +30,6 @@ const SubForm = () => {
                                 type="text"
                                 id="last-name"
                                 name="last-name"
-                                // onChange={(e)=>{setLastName(e.target.value)}}
                                 required
                             />
                         </label>
@@ -45,7 +43,6 @@ const SubForm = () => {
                                 id="email"
                                 name="email"
                                 placeholder="ex: myname@example.com"
-                                // onChange={(e)=>{setEmail(e.target.value)}}
                                 required
                             />
                         </label>
@@ -60,40 +57,30 @@ const SubForm = () => {
                                 name="telephone"
                                 pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
                                 placeholder="(xxx) xxx xxxx"
-                                // onChange={(e)=>{setTelephone(e.target.value)}}
                             />
-                            {/*<small>format: 123-456-7890</small>*/}
                         </label>
                     </div>
                     <div>
-                        <label htmlFor="education">
+                        <label htmlFor="period">
                             Period:
-                            <select id="education" >
+                            <select id="period" className={styles.period}>
                                 <option>please select one</option>
-                                <option value="A Week">A Week</option>
-                                <option value="A Month">A Month</option>
-                                <option value="A Month">Three Months</option>
+                                <option value="One Week">A Week</option>
+                                <option value="One Month">A Month</option>
+                                <option value="Three Month">Three Months</option>
                                 <option value="Six Months">Six Months</option>
-                                <option value="A Year">A Year</option>
+                                <option value="One Year">A Year</option>
                             </select>
                         </label>
-                        <label htmlFor="college">
-                            School/College:
-                            <input
-                                className={styles.college}
-                                type="text"
-                                id="college"
-                                name="tcollege"
-                                // onChange={(e)=>{setSchool(e.target.value)}}
-                            />
-                        </label>
+
                     </div>
-                    <div>
-                        <label>Type:</label>
-                        <input className={styles.certificate} type="radio" value="Premium" name="Premium" /><label>Premium</label>
-                        <input className={styles.certificate} type="radio" value="Premium" name="Premium" /><label>Premium</label>
+                    <div className={styles.typeContainer}>
+                        <label className={styles.typeLabel}>Type:</label>
+                        <input className={styles.typeOption} type="radio" value="Normal" name="Normal" /><label>Normal</label>
+                        <input className={styles.typeOption} type="radio" value="Premium" name="Premium" /><label>Premium</label>
+                        <input className={styles.typeOption} type="radio" value="Free Trial" name="Free Trial" /><label>Free Trial</label>
                     </div>
-                    <div>
+                    <div className={styles.formButtonContainer}>
                         <input className={styles.registerButton} type="submit" value="Register" />
                         <button className={styles.cancelButton}>Cancel</button>
                     </div>

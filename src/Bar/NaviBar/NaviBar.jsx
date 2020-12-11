@@ -9,7 +9,7 @@ const NaviBar = () => {
             <header className={styles.container}>
                 <nav>
                     {/*<a href="/seainfo6150-final-project-webapp" className={styles.mainIcon}>POSub</a>*/}
-                    <a href="/" className={styles.mainIcon}>POSub</a>
+                    <a href="/" className={styles.mainIcon}>PoSub</a>
                 </nav>
 
                 <nav>
@@ -18,7 +18,7 @@ const NaviBar = () => {
 
                         <li className={styles.listItem}>
                             {/*<a href="/seainfo6150-final-project-webapp/about">About</a>*/}
-                            <a href="/about">About</a>
+                            <a href="/contact">Contact</a>
                         </li>
 
                         <li className={styles.listItem}>

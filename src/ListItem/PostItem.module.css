@@ -31,3 +31,12 @@
 .textPart h3 {
     margin-top: 0px;
 }
+
+@media screen and (max-width: 780px){
+
+    .container {
+        display: flex;
+        flex-flow: column-reverse;
+    }
+
+}

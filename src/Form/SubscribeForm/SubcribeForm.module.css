@@ -1,19 +1,10 @@
 .container {
-    font-family: SourceSansPro, Arial, sans-serif;
+    /*font-family: SourceSansPro, Arial, sans-serif;*/
     margin: -31px -30px 0px;
-}
-
-.topContainer{
-    background-image: linear-gradient(90deg, rgb(0, 26, 87), rgb(246, 234, 184));
-    color: #fff;
 }
 
 h1 {
     font-family: OpenSans,Arial,sans-serif;
-}
-
-.topWrapper {
-    padding: 20px 60px 30px;
 }
 
 sup {
@@ -39,27 +30,31 @@ sup {
     font-size: 20px;
 }
 
-.name, .education, .college, .reason {
+.name, .period, .college, .reason {
     position: relative;
     margin: 10px 10px 10px 12px;
     min-height: 25px;
     min-width: 300px;
 }
-.education, .reason {
+.period {
     padding: 1px 2px;
-    height:30px;
+    /*height:30px;*/
+    margin: 0px 10px 10px 59px;
+
+    min-height: 25px;
+    min-width: 300px;
 }
 
 .email {
     position: relative;
-    margin: 10px 10px 10px 45px;
+    margin: 20px 10px 10px 55px;
     min-height: 25px;
     min-width: 300px;
 }
 
 .phone{
     position: relative;
-    margin: 10px;
+    margin: 15px 20px 20px 23px;
     min-height: 25px;
     min-width: 300px;
 }
@@ -101,4 +96,22 @@ sup {
 
 .confirmContainer h4{
     text-align: center;
+}
+
+.formButtonContainer {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 30px;
+}
+
+.typeLabel {
+    margin-right: 65px;
+}
+
+.typeOption {
+    margin-left: 10px;
+}
+
+.typeContainer {
+    margin: 10px 10px 10px 10px;
 }

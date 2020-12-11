@@ -26,7 +26,7 @@ function App() {
         const fetchData = async () => {
             // performs a GET request
             // const response = await fetch("https://5fc3f9f8e5c28f0016f54fc2.mockapi.io/api/v1/posts");
-            const response = await fetch("https://run.mocky.io/v3/2105e77e-1571-47bf-b997-bf7889748d14");
+            const response = await fetch("https://run.mocky.io/v3/b0c97415-646e-4deb-be72-cb8c114afa21");
             const responseJson = await response.json();
 
             console.log('post resp - json:', responseJson)
@@ -44,29 +44,6 @@ function App() {
     return isEmpty(fetchedData) ? null : (
         <div className="App">
             <>
-                <header>
-                    {/*{Homepage}*/}
-
-                    {/*<Homepage articles={fetchedData} />*/}
-
-                    {/*<nav>*/}
-                    {/*  <ul>*/}
-                    {/*    /!* these links should show you how to connect up a link to a specific route *!/*/}
-                    {/*    <li>*/}
-                    {/*      <Link to="/">Home</Link>*/}
-                    {/*    </li>*/}
-                    {/*    <li>*/}
-                    {/*      <Link to="/foo">Foo</Link>*/}
-                    {/*    </li>*/}
-                    {/*    <li>*/}
-                    {/*      <Link to="/bar/hats/sombrero">Bar</Link>*/}
-                    {/*    </li>*/}
-                    {/*    <li>*/}
-                    {/*      <Link to="/baz">Baz</Link>*/}
-                    {/*    </li>*/}
-                    {/*  </ul>*/}
-                    {/*</nav>*/}
-                </header>
                 {/* A <Switch> looks through its children <Route>s and
             renders the first one that matches the current URL. */}
                 <Switch>
@@ -74,36 +51,11 @@ function App() {
                     {/*<Route path="/seainfo6150-final-project-webapp" exact>*/}
                         <Homepage posts={fetchedData} />
                     </Route>
+
                     <Route path="/seainfo6150-final-project-webapp/foo" exact component={Foo} />
 
-                    <Route path="/about" exact component={AboutPage} />
+                    <Route path="/contact" exact component={AboutPage} />
                     {/*<Route path="/seainfo6150-final-project-webapp/about" exact component={AboutPage} />*/}
-
-                    {/*<Route*/}
-                    {/*    path="/posts/:id"*/}
-                    {/*    exact*/}
-
-                    {/*    render={({ match }) => (*/}
-                    {/*        <DetailPost*/}
-                    {/*            id={match.param.id}*/}
-                    {/*            post={mockPosts}*/}
-                    {/*        />*/}
-                    {/*    )}*/}
-                    {/*/>*/}
-
-                    {/* passing parameters via a route path */}
-                    {/*<Route*/}
-                    {/*    path="/bar/:categoryId/:productId"*/}
-                    {/*    exact*/}
-                    {/*    render={({ match }) => (*/}
-                    {/*        // getting the parameters from the url and passing*/}
-                    {/*        // down to the component as props*/}
-                    {/*        <Bar*/}
-                    {/*            categoryId={match.params.categoryId}*/}
-                    {/*            productId={match.params.productId}*/}
-                    {/*        />*/}
-                    {/*    )}*/}
-                    {/*/>*/}
 
                     <Route
                         path="/posts/:id"

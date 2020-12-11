@@ -36,3 +36,22 @@
 
     width: 30%;
 }
+
+@media screen and (max-width: 1200px){
+
+    .bodyPart {
+        display: flex;
+        flex-flow: column-reverse;
+    }
+
+    .leftPart {
+        border: none;
+    }
+
+    .rightPart {
+        width: 100%;
+        display: flex;
+        flex-flow: row wrap;
+    }
+
+}
